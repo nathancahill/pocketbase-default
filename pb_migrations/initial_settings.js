@@ -7,6 +7,8 @@ migrate(
     admin.setPassword(process.env.PB_PASSWORD);
 
     dao.saveAdmin(admin);
+
+    console.log("Created admin account");
   },
   (db) => {
     const dao = new Dao(db);
