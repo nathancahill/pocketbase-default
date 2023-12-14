@@ -1,7 +1,7 @@
 onModelAfterCreate((e) => {
-  console.log(e.model, "create");
-  const cmd = $os.cmd("ls", "-sl", "/pb/pb_migrations");
-  const output = String.fromCharCode(...cmd.output());
+  console.log(e.model.tableName(), "create");
+  const cmd = $os.cmd("ls", "/pb/pb_migrations");
+  const output = cmd.output();
   console.log(output);
 });
 
