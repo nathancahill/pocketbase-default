@@ -1,14 +1,11 @@
 onModelAfterCreate((e) => {
   console.log(e.model.tableName(), "create");
-  const cmd = $os.cmd("ls", "/pb/pb_migrations");
-  const output = cmd.output();
-  console.log(output);
-});
+}, "_collections");
 
 onModelAfterUpdate((e) => {
   console.log(e.model.tableName(), "update");
-});
+}, "_collections");
 
 onModelAfterDelete((e) => {
   console.log(e.model.tableName(), "delete");
-});
+}, "_collections");
