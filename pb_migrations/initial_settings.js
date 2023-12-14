@@ -12,7 +12,7 @@ migrate(
     const dao = new Dao(db);
 
     try {
-      const admin = dao.findAdminByEmail("test@example.com");
+      const admin = dao.findAdminByEmail(process.env.PB_EMAIL);
 
       dao.deleteAdmin(admin);
     } catch (_) {}
