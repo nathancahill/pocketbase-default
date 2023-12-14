@@ -3,8 +3,8 @@ migrate(
     const dao = new Dao(db);
 
     const admin = new Admin();
-    admin.email = "test@example.com";
-    admin.setPassword("1234567890");
+    admin.email = process.env.PB_EMAIL;
+    admin.setPassword(process.env.PB_PASSWORD);
 
     dao.saveAdmin(admin);
   },
